@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DLHC - Đồng Lực, Cho cuộc sống phồn vinh</title>
+<meta name="description" content="Công ty Cổ phần Đầu tư và Thương mại Hà Nội (DLHC): hơn 20 năm phát triển khu đô thị, nhà ở xã hội và khu hỗn hợp tại Hà Nội và Bắc Ninh.">
+<meta property="og:title" content="DLHC - Đồng Lực, Cho cuộc sống phồn vinh">
+<meta property="og:description" content="4 dự án, hơn 7.900 tỷ đồng vốn đầu tư, hơn 20 năm kinh nghiệm bất động sản.">
+<meta property="og:image" content="assets/phung-thuong.jpg">
+<link rel="icon" href="assets/logo.jpg">
+<style>
+:root{
+  --teal:#1f9a9d; --teal-d:#137a7d; --teal-l:#e6f6f6;
+  --gold:#b8921a; --gold-l:#fbf4de;
+  --ink:#16313a; --muted:#5b7078; --bg:#ffffff; --soft:#f6fafa; --line:#e1ecec;
+  --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1160px,100% - 32px);margin-inline:auto}
+section{padding:84px 0}
+.eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+h1,h2,h3{line-height:1.2;letter-spacing:-.01em}
+h2{font-size:clamp(28px,4vw,42px);margin-bottom:14px}
+.lead{font-size:18px;color:var(--muted);max-width:680px}
+.center{text-align:center}.center .lead{margin-inline:auto}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:999px;font-weight:700;font-size:16px;border:2px solid transparent;cursor:pointer;transition:.2s;font-family:inherit}
+.btn-primary{background:var(--gold);color:#fff;box-shadow:0 8px 22px rgba(184,146,26,.35)}
+.btn-primary:hover{transform:translateY(-2px);background:#a38115}
+.btn-ghost{background:#fff;color:var(--teal-d);border-color:var(--teal)}
+.btn-ghost:hover{background:var(--teal-l)}
+
+/* nav */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.nav img{height:44px;width:auto}
+.nav ul{display:flex;gap:28px;list-style:none;font-weight:600;font-size:15px;color:var(--muted)}
+.nav ul a:hover{color:var(--teal-d)}
+.nav .btn{padding:10px 20px;font-size:14px}
+
+/* hero */
+.hero{padding:56px 0 72px;background:linear-gradient(180deg,var(--teal-l),#fff 85%)}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center}
+.badge{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid var(--line);padding:8px 16px;border-radius:999px;font-size:14px;font-weight:600;color:var(--teal-d);margin-bottom:22px}
+.badge i{width:8px;height:8px;border-radius:50%;background:var(--gold)}
+.hero h1{font-size:clamp(34px,5.2vw,58px);margin-bottom:20px}
+.hero h1 em{font-style:normal;color:var(--teal)}
+.hero p{font-size:19px;color:var(--muted);margin-bottom:30px;max-width:540px}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.hero-img{position:relative}
+.hero-img img{border-radius:28px;box-shadow:0 30px 60px rgba(19,122,125,.22);aspect-ratio:4/3;object-fit:cover;width:100%}
+.float{position:absolute;left:-22px;bottom:-22px;background:#fff;border-radius:16px;padding:16px 20px;box-shadow:0 14px 34px rgba(0,0,0,.14);border-left:5px solid var(--gold)}
+.float b{display:block;font-size:26px;color:var(--teal-d);line-height:1.1}
+.float span{font-size:13px;color:var(--muted)}
+
+/* stats */
+.stats{padding:0;margin-top:-26px;position:relative;z-index:2}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border-radius:var(--r);box-shadow:0 18px 44px rgba(22,49,58,.1);border:1px solid var(--line)}
+.stat{padding:28px 20px;text-align:center;border-right:1px solid var(--line)}
+.stat:last-child{border:0}
+.stat b{display:block;font-size:clamp(28px,3.6vw,40px);color:var(--teal);line-height:1.1}
+.stat span{font-size:14px;color:var(--muted)}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.about-logo{background:var(--soft);border:1px solid var(--line);border-radius:28px;padding:40px}
+.checks{list-style:none;margin-top:22px;display:grid;gap:12px}
+.checks li{display:flex;gap:12px;align-items:flex-start}
+.checks li::before{content:"✓";flex:none;width:24px;height:24px;border-radius:50%;background:var(--teal);color:#fff;font-size:14px;display:grid;place-items:center;margin-top:2px}
+
+/* why */
+.why{background:var(--soft)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:30px;transition:.2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(19,122,125,.12)}
+.ico{width:52px;height:52px;border-radius:14px;background:var(--gold-l);color:var(--gold);display:grid;place-items:center;font-size:24px;margin-bottom:18px}
+.card h3{font-size:20px;margin-bottom:8px}
+.card p{color:var(--muted);font-size:15.5px}
+
+/* projects */
+.projects{display:grid;gap:34px;margin-top:48px}
+.proj{display:grid;grid-template-columns:1.1fr 1fr;gap:0;background:#fff;border:1px solid var(--line);border-radius:26px;overflow:hidden;box-shadow:0 10px 30px rgba(22,49,58,.06)}
+.proj:nth-child(even){grid-template-columns:1fr 1.1fr}
+.proj:nth-child(even) .pimg{order:2}
+.pimg{min-height:320px;background:var(--soft)}
+.pimg img{width:100%;height:100%;object-fit:cover}
+.pbody{padding:38px}
+.tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:999px;background:var(--teal-l);color:var(--teal-d);margin-bottom:12px}
+.tag.gold{background:var(--gold-l);color:#8a6c0d}
+.pbody h3{font-size:26px;margin-bottom:6px}
+.where{color:var(--muted);font-size:15px;margin-bottom:18px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px}
+.facts div{background:var(--soft);border-radius:12px;padding:12px 10px;text-align:center}
+.facts b{display:block;color:var(--teal-d);font-size:19px;line-height:1.2}
+.facts span{font-size:12px;color:var(--muted)}
+.pbody ul{list-style:none;display:grid;gap:7px;font-size:15px;color:var(--muted)}
+.pbody li::before{content:"•";color:var(--gold);font-weight:900;margin-right:8px}
+
+/* timeline */
+.tl{background:linear-gradient(135deg,var(--teal-d),var(--teal));color:#fff}
+.tl .eyebrow{color:#f3dc8a}
+.tl .lead{color:#d8f1f1}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
+.step{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:var(--r);padding:24px}
+.step b{display:block;font-size:30px;color:#f3dc8a}
+.step span{font-size:15px;color:#e8f7f7}
+
+/* org */
+.org{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.org img{border:1px solid var(--line);border-radius:var(--r);padding:16px;background:#fff}
+
+/* contact */
+.contact{background:var(--gold-l)}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.info{display:grid;gap:18px;margin-top:26px}
+.info div{display:flex;gap:14px}
+.info .ico{margin:0;flex:none;width:46px;height:46px;font-size:20px;background:#fff}
+.info b{display:block}
+.info span{color:var(--muted);font-size:15px}
+form{background:#fff;border-radius:24px;padding:34px;box-shadow:0 18px 44px rgba(22,49,58,.1);display:grid;gap:14px}
+form h3{font-size:22px}
+label{font-size:14px;font-weight:600;display:grid;gap:6px}
+input,select,textarea{font:inherit;padding:13px 14px;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--teal)}
+.note{font-size:13px;color:var(--muted)}
+
+footer{padding:38px 0;background:var(--ink);color:#b7c8cd;font-size:14px}
+.f{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+.f img{height:40px;background:#fff;border-radius:8px;padding:4px 8px}
+
+@media (max-width:900px){
+  section{padding:60px 0}
+  .nav ul{display:none}
+  .hero-grid,.about-grid,.org,.cgrid{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .proj,.proj:nth-child(even){grid-template-columns:1fr}
+  .proj:nth-child(even) .pimg{order:0}
+  .pimg{min-height:240px}
+  .steps{grid-template-columns:1fr 1fr}
+  .float{left:12px;bottom:-18px}
+  .pbody{padding:26px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top"><img src="assets/logo.jpg" alt="Logo DLHC"></a>
+    <ul>
+      <li><a href="#gioi-thieu">Giới thiệu</a></li>
+      <li><a href="#du-an">Dự án</a></li>
+      <li><a href="#tien-do">Tiến độ</a></li>
+      <li><a href="#nang-luc">Năng lực</a></li>
+    </ul>
+    <a class="btn btn-primary" href="#lien-he">Nhận tư vấn</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="badge"><i></i> Vững bước từ năm 2005</span>
+      <h1>Kiến tạo <em>nơi an cư</em>, cho cuộc sống phồn vinh</h1>
+      <p>DLHC phát triển khu đô thị, nhà ở xã hội và khu hỗn hợp tại Hà Nội và Bắc Ninh. Hơn 20 năm làm nghề, mỗi dự án đều hướng tới một việc: để nhiều gia đình có một chỗ ở tốt, đúng tầm với.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#du-an">Xem các dự án</a>
+        <a class="btn btn-ghost" href="#lien-he">Liên hệ ngay</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="assets/phung-thuong.jpg" alt="Phối cảnh Nhà ở xã hội Phụng Thượng, Phúc Thọ, Hà Nội">
+      <div class="float"><b>1.400 căn hộ</b><span>tại dự án NOXH Kim Thư</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="wrap stats-grid">
+    <div class="stat"><b>2005</b><span>Năm thành lập</span></div>
+    <div class="stat"><b>2.550 tỷ</b><span>Vốn điều lệ (đồng)</span></div>
+    <div class="stat"><b>4</b><span>Dự án tiêu biểu</span></div>
+    <div class="stat"><b>~7.930 tỷ</b><span>Tổng vốn đầu tư (đồng)</span></div>
+  </div>
+</section>
+
+<section id="gioi-thieu">
+  <div class="wrap about-grid">
+    <div class="about-logo"><img src="assets/logo.jpg" alt="DLHC - Đồng Lực, Cho cuộc sống phồn vinh"></div>
+    <div>
+      <span class="eyebrow">Về DLHC</span>
+      <h2>Đồng Lực để mỗi dự án là một cam kết</h2>
+      <p class="lead">Công ty Cổ phần Đầu tư và Thương mại Hà Nội thành lập năm 2005. Chúng tôi đầu tư, xây dựng và phát triển các khu nhà ở, khu đô thị trên địa bàn Hà Nội và nhiều tỉnh thành khác.</p>
+      <ul class="checks">
+        <li>Kinh doanh bất động sản và quyền sử dụng đất</li>
+        <li>Đầu tư phát triển khu đô thị, khu nhà ở, nhà ở xã hội</li>
+        <li>Thi công công trình dân dụng, công nghiệp, giao thông</li>
+        <li>Đơn vị có tư cách pháp nhân rõ ràng, vốn điều lệ 2.550 tỷ đồng</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Vì sao chọn DLHC</span>
+      <h2>Ba điều khách hàng và đối tác có thể tin</h2>
+    </div>
+    <div class="cards">
+      <div class="card"><div class="ico">🏛</div><h3>Nền tảng vững</h3><p>Hơn 20 năm hoạt động, vốn điều lệ 2.550 tỷ đồng, giấy chứng nhận đăng ký doanh nghiệp cập nhật đến lần thay đổi thứ 14 (02/2026).</p></div>
+      <div class="card"><div class="ico">🏙</div><h3>Dự án quy mô lớn</h3><p>Từ khu đô thị 8,87 ha đến nhà ở xã hội 16,8 ha. Mỗi dự án có quy hoạch hạ tầng, cây xanh và tiện ích thương mại đi kèm.</p></div>
+      <div class="card"><div class="ico">🤝</div><h3>Đồng hành đến cùng</h3><p>Đội ngũ quản lý dự án, tài chính, kỹ thuật và giải phóng mặt bằng làm việc dưới một đầu mối điều hành thống nhất.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="du-an">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Dự án tiêu biểu</span>
+      <h2>Những công trình đang hình thành</h2>
+      <p class="lead">Bốn dự án với tổng vốn đầu tư khoảng 7.930 tỷ đồng, trải từ Phúc Thọ, Việt Hưng (Hà Nội) đến Đa Mai (Bắc Ninh).</p>
+    </div>
+
+    <div class="projects">
+      <article class="proj">
+        <div class="pimg"><img loading="lazy" src="assets/phung-thuong.jpg" alt="Phối cảnh NOXH Phụng Thượng"></div>
+        <div class="pbody">
+          <span class="tag">Nhà ở xã hội</span>
+          <h3>NOXH Phụng Thượng</h3>
+          <p class="where">Xã Phúc Thọ, Hà Nội</p>
+          <div class="facts">
+            <div><b>16,8 ha</b><span>Diện tích</span></div>
+            <div><b>~4.136 tỷ</b><span>Vốn đầu tư</span></div>
+            <div><b>2026-2030</b><span>Thời gian</span></div>
+          </div>
+          <ul>
+            <li>9 tòa chung cư: 8 tòa 12 tầng và 1 tòa 18 tầng, có tầng hầm</li>
+            <li>6 khối thương mại dịch vụ thấp tầng, hơn 7.300 m²</li>
+            <li>Nhà ở thương mại thấp tầng, cây xanh và hạ tầng đồng bộ</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="proj">
+        <div class="pimg"><img loading="lazy" src="assets/kim-thu.jpg" alt="Quy hoạch tổng mặt bằng NOXH Kim Thư"></div>
+        <div class="pbody">
+          <span class="tag">Nhà ở xã hội</span>
+          <h3>NOXH Kim Thư</h3>
+          <p class="where">Xã Phúc Thọ, Hà Nội</p>
+          <div class="facts">
+            <div><b>4,3 ha</b><span>Diện tích</span></div>
+            <div><b>~1.954 tỷ</b><span>Vốn đầu tư</span></div>
+            <div><b>2026-2029</b><span>Thời gian</span></div>
+          </div>
+          <ul>
+            <li>5 tòa chung cư 16 tầng, khoảng 1.400 căn hộ, diện tích 47 đến 77 m²</li>
+            <li>Dự kiến đón khoảng 4.200 cư dân</li>
+            <li>8 khối thương mại dịch vụ, vườn cây, hồ nước, sân thể thao</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="proj">
+        <div class="pimg"><img loading="lazy" src="assets/my-do.jpg" alt="Bảng thông tin công trình 54 lô Khu đô thị mới Mỹ Độ"></div>
+        <div class="pbody">
+          <span class="tag gold">Đang thi công</span>
+          <h3>Khu đô thị mới Mỹ Độ</h3>
+          <p class="where">Phường Đa Mai, tỉnh Bắc Ninh</p>
+          <div class="facts">
+            <div><b>8,87 ha</b><span>Diện tích</span></div>
+            <div><b>54 căn</b><span>Nhà thấp tầng</span></div>
+            <div><b>~195 tỷ</b><span>Vốn đầu tư</span></div>
+          </div>
+          <ul>
+            <li>Hạ tầng kỹ thuật đã hoàn thành từ năm 2022</li>
+            <li>Xây thô và hoàn thiện mặt tiền 54 căn, 4 tầng + 1 tum</li>
+            <li>Khởi công 18/09/2026, dự kiến hoàn thành 28/02/2027</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="proj">
+        <div class="pimg" style="display:grid;place-items:center;background:linear-gradient(135deg,var(--teal-l),var(--gold-l));padding:30px">
+          <div style="text-align:center"><div style="font-size:64px">🏢</div><b style="font-size:22px;color:var(--teal-d)">HH-02 &amp; NT-06</b><div style="color:var(--muted)">Khu đô thị mới Việt Hưng</div></div>
+        </div>
+        <div class="pbody">
+          <span class="tag">Khu hỗn hợp</span>
+          <h3>Nhà ở, thương mại, nhà trẻ Việt Hưng</h3>
+          <p class="where">Phường Việt Hưng, Hà Nội</p>
+          <div class="facts">
+            <div><b>~2 ha</b><span>Diện tích</span></div>
+            <div><b>~1.645 tỷ</b><span>Vốn đầu tư</span></div>
+            <div><b>Quý 4/2028</b><span>Dự kiến xong</span></div>
+          </div>
+          <ul>
+            <li>Tòa 18 tầng với 2 tầng hầm</li>
+            <li>Tòa 9 tầng với 1 tầng hầm và công trình 3 tầng</li>
+            <li>Kết hợp nhà ở, thương mại dịch vụ và nhà trẻ</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="tl" id="tien-do">
+  <div class="wrap">
+    <span class="eyebrow">Lộ trình</span>
+    <h2>Tiến độ rõ ràng, nhìn thấy được</h2>
+    <p class="lead">Các mốc chính của danh mục dự án DLHC từ nay đến năm 2030.</p>
+    <div class="steps">
+      <div class="step"><b>2022</b><span>Hoàn thành hạ tầng kỹ thuật Khu đô thị Mỹ Độ</span></div>
+      <div class="step"><b>02/2027</b><span>Dự kiến hoàn thành xây thô và mặt tiền 54 căn Mỹ Độ</span></div>
+      <div class="step"><b>2029</b><span>Hoàn thành NOXH Kim Thư, khoảng 1.400 căn hộ</span></div>
+      <div class="step"><b>2030</b><span>Hoàn thành NOXH Phụng Thượng, 16,8 ha</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="nang-luc">
+  <div class="wrap org">
+    <div>
+      <span class="eyebrow">Năng lực tổ chức</span>
+      <h2>Bộ máy gọn, phân công rõ</h2>
+      <p class="lead">Dưới Hội đồng quản trị và Giám đốc điều hành là năm phòng chuyên môn, phủ kín chuỗi việc từ giải phóng mặt bằng, kỹ thuật, kế hoạch đầu tư đến tài chính và quản lý dự án.</p>
+      <ul class="checks">
+        <li>Phòng Quản lý dự án</li>
+        <li>Phòng Tài chính kế hoạch</li>
+        <li>Phòng Kế hoạch đầu tư</li>
+        <li>Phòng Kỹ thuật</li>
+        <li>Phòng Giải phóng mặt bằng</li>
+      </ul>
+    </div>
+    <img loading="lazy" src="assets/so-do-to-chuc.png" alt="Sơ đồ tổ chức DLHC">
+  </div>
+</section>
+
+<section class="contact" id="lien-he">
+  <div class="wrap cgrid">
+    <div>
+      <span class="eyebrow">Liên hệ</span>
+      <h2>Bạn quan tâm dự án nào?</h2>
+      <p class="lead">Để lại thông tin, đội ngũ DLHC sẽ liên hệ tư vấn. Đối tác, nhà đầu tư và khách hàng đều được tiếp nhận.</p>
+      <div class="info">
+        <div><span class="ico">📍</span><p><b>Trụ sở</b><span>Tầng 3, tòa nhà Rose Garden, 170 Ngọc Khánh, phường Giảng Võ, Hà Nội</span></p></div>
+        <div><span class="ico">📞</span><p><b>Điện thoại</b><span><a href="tel:02438359011">024 3835 9011</a></span></p></div>
+        <div><span class="ico">✉️</span><p><b>Email</b><span><a href="mailto:khda@dlgroup.com.vn">khda@dlgroup.com.vn</a></span></p></div>
+      </div>
+    </div>
+    <form id="f">
+      <h3>Đăng ký nhận tư vấn</h3>
+      <label>Họ và tên<input name="ten" required placeholder="Nguyễn Văn A"></label>
+      <label>Số điện thoại<input name="sdt" type="tel" required placeholder="09xx xxx xxx"></label>
+      <label>Bạn quan tâm<select name="da">
+        <option>NOXH Phụng Thượng</option>
+        <option>NOXH Kim Thư</option>
+        <option>Khu đô thị mới Mỹ Độ</option>
+        <option>Khu hỗn hợp Việt Hưng</option>
+        <option>Hợp tác đầu tư</option>
+      </select></label>
+      <label>Lời nhắn<textarea name="msg" rows="3" placeholder="Bạn cần tư vấn điều gì?"></textarea></label>
+      <button class="btn btn-primary" type="submit">Gửi đăng ký</button>
+      <p class="note">Bấm gửi sẽ mở email của bạn với nội dung đã điền sẵn.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap f">
+    <img src="assets/logo.jpg" alt="DLHC">
+    <div>© 2026 Công ty Cổ phần Đầu tư và Thương mại Hà Nội · Mã số doanh nghiệp 0101747616<br>Thông tin dự án và phối cảnh mang tính giới thiệu, có thể điều chỉnh theo quyết định của cơ quan có thẩm quyền.</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('f').addEventListener('submit',function(e){
+  e.preventDefault();
+  var d=new FormData(this);
+  var body='Họ tên: '+d.get('ten')+'\nSĐT: '+d.get('sdt')+'\nQuan tâm: '+d.get('da')+'\nLời nhắn: '+d.get('msg');
+  location.href='mailto:khda@dlgroup.com.vn?subject='+encodeURIComponent('Đăng ký tư vấn: '+d.get('da'))+'&body='+encodeURIComponent(body);
+});
+</script>
+</body>
+</html>
